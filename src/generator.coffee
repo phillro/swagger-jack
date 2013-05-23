@@ -84,8 +84,8 @@ validateModel = (model, id, models) ->
     throw new Error("model #{id} not declared with the same id")
   unless !_.isEmpty(model.properties) or model.additionalProperties or !_.isEmpty(model.items)
     throw new Error("model #{id} does not declares properties")
-  if models[id]?
-    throw new Error("model #{id} has already been defined")
+  #if models[id]?
+   # throw new Error("model #{id} has already been defined")
   # TODO known references, no anonymous inner models
   return model
 
